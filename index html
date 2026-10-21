@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Enterprise Dashboard - Accessible</title>
+</head>
+<body>
+<a href="#main-content">Skip to main content</a>
+<header>
+<h1>Enterprise Dashboard</h1>
+<nav aria-label="Main navigation">
+<ul>
+<li><a href="index.html" aria-current="page">Home</a></li>
+<li><a href="dashboard.html">Dashboard</a></li>
+<li><a href="reports.html">Reports</a></li>
+</ul>
+</nav>
+</header>
+
+<div>
+<aside aria-label="Sidebar">
+<h2>Sidebar</h2>
+<nav aria-label="Sidebar navigation">
+<ul>
+<li><a href="#users">Users</a></li>
+<li><a href="#settings">Settings</a></li>
+</ul>
+</nav>
+</aside>
+
+<main id="main-content">
+<section aria-labelledby="overview-heading">
+<h2 id="overview-heading">Overview</h2>
+<article>
+<h3>Welcome</h3>
+<p>This is an accessible enterprise dashboard built with semantic HTML5.</p>
+</article>
+</section>
+
+<section aria-labelledby="users-heading">
+<h2 id="users-heading">User Data</h2>
+<table>
+<caption>User List</caption>
+<thead>
+<tr><th scope="col">Name</th><th scope="col">Email</th><th scope="col">Role</th></tr>
+</thead>
+<tbody>
+<tr><td>Swetha Kumar</td><td>swetha@example.com</td><td>Admin</td></tr>
+<tr><td>John Doe</td><td>john@example.com</td><td>User</td></tr>
+</tbody>
+</table>
+</section>
+
+<section aria-labelledby="form-heading">
+<h2 id="form-heading">Add User Form</h2>
+<form action="#" method="post">
+<fieldset>
+<legend>User Details</legend>
+<p>
+<label for="name">Full Name:</label>
+<input type="text" id="name" name="name" required aria-required="true">
+</p>
+<p>
+<label for="email">Email:</label>
+<input type="email" id="email" name="email" required aria-describedby="email-help">
+<span id="email-help">Enter a valid email address</span>
+</p>
+<p>
+<label for="role">Role:</label>
+<select id="role" name="role" required>
+<option value="">Select role</option>
+<option value="admin">Admin</option>
+<option value="user">User</option>
+</select>
+</p>
+<button type="submit">Submit</button>
+</fieldset>
+</form>
+</section>
+
+<button type="button" onclick="document.getElementById('myDialog').showModal()" aria-haspopup="dialog">Open Modal</button>
+<dialog id="myDialog" aria-labelledby="dialog-title">
+<h2 id="dialog-title">Modal Dialog</h2>
+<p>This is an accessible modal dialog.</p>
+<button type="button" onclick="document.getElementById('myDialog').close()">Close</button>
+</dialog>
+</main>
+</div>
+
+<footer>
+<p>&copy; 2026 Enterprise Dashboard. All rights reserved.</p>
+</footer>
+</body>
+</html>
